@@ -1,0 +1,23 @@
+{
+ "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+ "contentVersion": "1.0.0.0",
+ "parameters": {
+   "workspace": {
+     "type": "string"
+   }
+ },
+ "resources": [
+   {
+     "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+     "apiVersion": "2020-08-01",
+     "name": "[concat(parameters('workspace'), '/MyParser')]",
+     "properties": {
+       "displayName": "MyParser",
+       "category": "Parsers",
+       "query": "CommonSecurityLog | extend ParsedAction=tostring(DeviceAction)",
+       "functionAlias": "MyParser",
+       "version": 1
+     }
+   }
+ ]
+}
