@@ -1,0 +1,5 @@
+let MyParser = () {
+CommonSecurityLog
+| extend ParsedAction = tostring(DeviceAction)
+};
+MyParser
