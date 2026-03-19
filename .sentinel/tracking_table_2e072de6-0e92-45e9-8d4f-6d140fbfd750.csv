@@ -1,3 +1,4 @@
 FileName, CommitSha
 Parsers/MyParser/azuredeploy.json,8748070cb81fe7f098c490441857ee5508bc4283
+Parsers/MySecondParser/azuredeploy.json,f4a75bf1b7add173935fdba4b6ffe4e75b0e13b5
 
